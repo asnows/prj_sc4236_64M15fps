@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='E:/WorkSpace/project/FPGA_backup/prj_sc4236_64M15fps/prj_sc4236_64M15fps/prj_sc4236/prj_sc4236.runs/impl_1'
+HD_PWD='E:/WorkSpace/project/FPGA/prj_sc4236_64M15fps/prj_sc4236_64M15fps/prj_sc4236_64M15fps.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
+/bin/touch .write_bitstream.begin.rst
 EAStep vivado -log top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
 
 
